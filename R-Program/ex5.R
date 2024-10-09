@@ -9,4 +9,3 @@ n <- length(data)
 
 #calculate population Variance
 var(data)*(n-1)/n
-

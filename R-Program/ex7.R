@@ -11,11 +11,7 @@ df <- data.frame(last_name=randomNames(500),gpa=rnorm(500,mean=82,sd=3))
 head(df)
 
 #define function to obtain systematic sample
-obtain_sys = function(N,n){
-k= ceiling(N/n)
-r= sample(1:k,1)
-seq(r,r+k*(n-1),k)
-}
+obtain_sys = function(N,n){ k= ceiling(N/n) r= sample(1:k,1) seq(r,r+k*(n-1),k) }
 
 #obtain systematic sample
 sys_sample_df = df[obtain_sys(nrow(df),100),]
