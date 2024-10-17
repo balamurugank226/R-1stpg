@@ -1,23 +1,17 @@
-# Set the rate parameter
+#Given the parameter (lambda)
 lambda <- 0.2
 
-# Calculate the mean and variance
-mean_value <- 1 / lambda
-variance_value <- 1 / (lambda^2)
+#Calculate Mean(Expected Value)
+mean_value <- 1/lambda
+mean_value
 
-# Print the mean and variance
-cat("Mean:", mean_value, "\n")
-cat("Variance:", variance_value, "\n")
+#Calculate Variance
+variance_value <- 1/(lambda^2)
+variance_value
 
-# Simulate the exponential distribution
-set.seed(123)  # for reproducibility
-data <- rexp(1000, rate = lambda)
+#Generate random samples from the exponential distribution
+sample_size <- 1000 #You can adjust the sample size
+samples <- rexp(sample_size,rate = lambda)
 
-# Plot the histogram
-hist(data, probability = TRUE, breaks = 30, col = "skyblue", 
-     main = "Histogram of Exponential Distribution (λ = 0.2)",
-     xlab = "Time between arrivals (hours)", ylab = "Density")
-
-# Add theoretical curve
-curve(dexp(x, rate = lambda), col = "red", lwd = 2, add = TRUE)
-
+#Create a Histogram
+hist(samples,breaks=20,main="Exponential Distribution Histogram")
