@@ -12,3 +12,4 @@ sampled_village <- sample(data$village,size=6,prob=data$probability)
 
 #display the sampled village
 print(sampled_village)
+

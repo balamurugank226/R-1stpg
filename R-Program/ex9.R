@@ -6,10 +6,8 @@ sh_sq <- c(22.76,56.6,71.4,192.4,334.7)
 
 #Calculation population total of (t)
 t <- sum(Nh/nh*fh)
-
 #Calculate total number of frames (n)
 n <- sum(Nh)
-
 #Calculate the average number of cattle per farm (y)
 y <- t/n
 
@@ -17,6 +15,7 @@ y <- t/n
 se <- sqrt(sum(sh_sq*(Nh/nh^2)*(Nh-nh)/(Nh^2)))
 
 #print the results
-cat("estimated average number of cattle per farm (y) :",y,"\n")
-cat("estimated population total :",t,"\n")
-cat("estimated error (se) of the estimate :",se,"\n")
+cat("Estimated average number of cattle per farm (y) :",y,"\n")
+cat("Estimated population total :",t,"\n")
+cat("Estimated error (SE) of the estimate :",se,"\n")
+
